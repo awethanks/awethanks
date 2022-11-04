@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var obj = new Object();
+    
+        obj.name = "Kitty";
+    
+        obj.age = 21;
+    
+        obj.showName = function () {
+    
+            console.log(this.name);
+    
+        };
+    
+        obj.showAge = function(){
+    
+            console.log(this.age);
+    
+        };
+    
+        obj.showName();
+    
+        obj.showAge();
+    
+    </script>
+    <script>
+
+        function createObj(){
+    
+            var obj = new Object();//创建对象
+    
+            obj.name = "Kitty";
+    
+            obj.age = "21";
+    
+            obj.showName = function () {
+    
+                console.log(this.name);
+    
+            };
+    
+            obj.showAge = function () {
+    
+                console.log(this.age);
+    
+            };
+    
+            return obj;
+    
+        }
+    
+      
+    
+        var obj1 = createObj();
+    
+        var obj2 = createObj();
+    
+      
+    
+        obj1.showName();
+    
+        obj1.showAge();
+    
+      
+    
+        obj2.showName();
+    
+        obj2.showAge();
+    
+    </script>
+</body>
+</html>
